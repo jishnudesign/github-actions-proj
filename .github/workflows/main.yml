@@ -1,0 +1,13 @@
+name : Jishnu Publish Docker image
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  push_to_registry:
+    name: Pushing docker image to docker hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
